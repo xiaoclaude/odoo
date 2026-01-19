@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 主页模板 -->
+    <template id="sz_homepage_page" name="首正会计师事务所">
+        <t t-call="website.layout">
+            <t t-set="no_header" t-value="True"/>
+            <t t-set="no_footer" t-value="True"/>
+            
+            <t t-set="head">
+                <!-- 网站图标 -->
+                <link rel="icon" type="image/jpeg" href="/sz_shouzheng_homepage/static/src/img/logo.jpg"/>
+                <link rel="shortcut icon" type="image/jpeg" href="/sz_shouzheng_homepage/static/src/img/logo.jpg"/>
+                <link rel="apple-touch-icon" href="/sz_shouzheng_homepage/static/src/img/logo.jpg"/>
+                <!-- 字体预加载优化 -->
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
+                <link rel="stylesheet" href="/sz_shouzheng_homepage/static/src/css/homepage_new.css?v=2.1"/>
+            </t>
+
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="sz-page">
+                    <!-- Navigation -->
+                    <nav class="sz-nav">
+                        <div class="sz-nav-inner">
+                            <a href="/" class="sz-logo">
+                                <img src="/sz_shouzheng_homepage/static/src/img/logo.jpg" alt="首正" class="sz-logo-img"/>
+                                <div class="sz-logo-text">
+                                    首正会计师事务所
+                                    <small>SHOUZHENG CPA FIRM</small>
+                                </div>
+                            </a>
+                            <div class="sz-nav-contact">
+                                📞 0755-85000006
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Hero -->
+                    <section class="sz-hero">
+                        <div class="sz-hero-inner">
+                            <div class="sz-hero-badge">✓ 专业 · 诚信 · 高效</div>
+                            <h1>深圳市首正<span>会计师事务所</span></h1>
+                            <p class="sz-hero-desc">
+                                我们是一家专注于为企业提供审计、税务、咨询等专业服务的会计师事务所。
+                                秉承"专业、诚信、高效"的服务理念，为客户创造价值。
+                            </p>
+                            <div>
+                                <a href="#contact" class="sz-btn sz-btn-primary">联系我们</a>
+                                <a href="#services" class="sz-btn sz-btn-outline">了解服务</a>
+                            </div>
+                            <div class="sz-hero-stats">
+                                <div class="sz-hero-stat">
+                                    <div class="sz-hero-stat-value">10<span>+</span></div>
+                                    <div class="sz-hero-stat-label">年专业经验</div>
+                                </div>
+                                <div class="sz-hero-stat">
+                                    <div class="sz-hero-stat-value">500<span>+</span></div>
+                                    <div class="sz-hero-stat-label">服务客户</div>
+                                </div>
+                                <div class="sz-hero-stat">
+                                    <div class="sz-hero-stat-value">100<span>%</span></div>
+                                    <div class="sz-hero-stat-label">客户满意度</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Clients -->
+                    <section class="sz-clients">
+                        <div class="sz-container">
+                            <div class="sz-section-header">
+                                <div class="sz-section-tag">合作客户</div>
+                                <h2 class="sz-section-title">由于信任，所以选择</h2>
+                                <p class="sz-section-desc">我们要感谢这些行业领军企业选择首正作为合作伙伴</p>
+                            </div>
+                            <div class="sz-clients-grid">
+                                <div class="sz-client-item" title="宁德时代">
+                                    <img src="/sz_shouzheng_homepage/static/src/img/client_catl.svg" alt="宁德时代"/>
+                                </div>
+                                <div class="sz-client-item" title="乐相科技">
+                                    <img src="/sz_shouzheng_homepage/static/src/img/client_deepoon.png" alt="乐相科技"/>
+                                </div>
+                                <div class="sz-client-item" title="诚信志远果业">
+                                    <img src="/sz_shouzheng_homepage/static/src/img/client_chengxin.png" alt="诚信志远果业"/>
+                                </div>
+                                <div class="sz-client-item" title="中广核">
+                                    <img src="/sz_shouzheng_homepage/static/src/img/client_cgn.jpg" alt="中广核"/>
+                                </div>
+                                <div class="sz-client-item" title="高乐股份">
+                                    <img src="/sz_shouzheng_homepage/static/src/img/client_goldlok.svg" alt="高乐股份"/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="sz-services" id="services">
+                        <div class="sz-container">
+                            <div class="sz-section-header">
+                                <div class="sz-section-tag">服务项目</div>
+                                <h2 class="sz-section-title">专业的财税服务解决方案</h2>
+                                <p class="sz-section-desc">我们提供全方位的财务、税务及咨询服务，助力企业稳健发展</p>
+                            </div>
+                            <div class="sz-services-grid">
+                                <div class="sz-service-card">
+                                    <div class="sz-service-icon">📋</div>
+                                    <h3 class="sz-service-title">审计服务</h3>
+                                    <p class="sz-service-desc">年度审计、专项审计、内部控制审计，提供独立客观的鉴证意见</p>
+                                </div>
+                                <div class="sz-service-card">
+                                    <div class="sz-service-icon">💰</div>
+                                    <h3 class="sz-service-title">税务服务</h3>
+                                    <p class="sz-service-desc">税务筹划、纳税申报、税务咨询，合理合规降低税负</p>
+                                </div>
+                                <div class="sz-service-card">
+                                    <div class="sz-service-icon">📊</div>
+                                    <h3 class="sz-service-title">财务咨询</h3>
+                                    <p class="sz-service-desc">财务管理咨询、内控体系建设、财务流程优化</p>
+                                </div>
+                                <div class="sz-service-card">
+                                    <div class="sz-service-icon">🏢</div>
+                                    <h3 class="sz-service-title">工商服务</h3>
+                                    <p class="sz-service-desc">公司注册、变更、注销，资质许可办理</p>
+                                </div>
+                                <div class="sz-service-card">
+                                    <div class="sz-service-icon">🔑</div>
+                                    <h3 class="sz-service-title">验资服务</h3>
+                                    <p class="sz-service-desc">企业设立验资、增资验资、减资验资</p>
+                                </div>
+                                <div class="sz-service-card">
+                                    <div class="sz-service-icon">📝</div>
+                                    <h3 class="sz-service-title">代理记账</h3>
+                                    <p class="sz-service-desc">专业代理记账服务，按时完成纳税申报</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact -->
+                    <section class="sz-contact" id="contact">
+                        <div class="sz-container">
+                            <div class="sz-section-header">
+                                <div class="sz-section-tag">联系我们</div>
+                                <h2 class="sz-section-title">期待与您的合作</h2>
+                                <p class="sz-section-desc">如有任何财税问题，欢迎随时与我们联系</p>
+                            </div>
+                            <div class="sz-contact-grid">
+                                <div class="sz-contact-item">
+                                    <div class="sz-contact-icon">📍</div>
+                                    <div class="sz-contact-label">公司地址</div>
+                                    <p class="sz-contact-value">
+                                        深圳市福田区深南大道2008号<br/>
+                                        中国凤凰大厦2栋702
+                                    </p>
+                                </div>
+                                <div class="sz-contact-item">
+                                    <div class="sz-contact-icon">📞</div>
+                                    <div class="sz-contact-label">联系电话</div>
+                                    <p class="sz-contact-value">
+                                        <a href="tel:0755-85000006">0755-85000006</a>
+                                    </p>
+                                </div>
+                                <div class="sz-contact-item">
+                                    <div class="sz-contact-icon">🕐</div>
+                                    <div class="sz-contact-label">工作时间</div>
+                                    <p class="sz-contact-value">
+                                        周一至周五<br/>
+                                        9:00 - 18:00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer class="sz-footer">
+                        © 2024 深圳市首正会计师事务所（普通合伙）版权所有
+                    </footer>
+                </div>
+            </div>
+        </t>
+    </template>
+    
+    <!-- 菜单 -->
+    <record id="sz_homepage_menu" model="website.menu">
+        <field name="name">首页</field>
+        <field name="url">/sz-homepage</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">1</field>
+    </record>
+    
+    <!-- 页面记录 -->
+    <record id="sz_homepage_website_page" model="website.page">
+        <field name="name">首正会计师事务所</field>
+        <field name="url">/sz-homepage</field>
+        <field name="view_id" ref="sz_homepage_page"/>
+        <field name="is_published" eval="True"/>
+        <field name="website_indexed" eval="True"/>
+    </record>
+    
+    <!-- 覆盖网站Favicon为公司Logo -->
+    <template id="sz_custom_favicon" inherit_id="website.layout" name="Custom Favicon">
+        <xpath expr="//t[@t-set='x_icon']" position="attributes">
+            <attribute name="t-value">'/sz_shouzheng_homepage/static/src/img/logo.jpg'</attribute>
+        </xpath>
+    </template>
+</odoo>

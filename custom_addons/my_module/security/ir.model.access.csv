@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_my_example_user,my.example.user,model_my_example,base.group_user,1,1,1,0
+access_my_example_manager,my.example.manager,model_my_example,base.group_system,1,1,1,1
+access_my_example_tag_user,my.example.tag.user,model_my_example_tag,base.group_user,1,0,0,0
+access_my_example_tag_manager,my.example.tag.manager,model_my_example_tag,base.group_system,1,1,1,1

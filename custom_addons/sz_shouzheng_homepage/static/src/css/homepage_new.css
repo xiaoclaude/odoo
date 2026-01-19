@@ -1,0 +1,606 @@
+/*
+ * 首正会计师事务所主页样式
+ * 配色：Deep Navy (#0F2540) + Rich Gold (#BFA15F)
+ */
+
+:root {
+    --sz-primary: #0F2540;
+    --sz-primary-dark: #0A1A2F;
+    --sz-primary-light: #1E3A5F;
+    --sz-accent: #BFA15F;
+    --sz-accent-hover: #D4B975;
+    --sz-text: #1A202C;
+    --sz-text-secondary: #4A5568;
+    --sz-bg-light: #F8FAFC;
+    --sz-border: #E2E8F0;
+    --sz-shadow-sm: 0 1px 3px rgba(15, 37, 64, 0.05);
+    --sz-shadow-md: 0 4px 6px -1px rgba(15, 37, 64, 0.1), 0 2px 4px -1px rgba(15, 37, 64, 0.06);
+    --sz-shadow-lg: 0 10px 15px -3px rgba(15, 37, 64, 0.1), 0 4px 6px -2px rgba(15, 37, 64, 0.05);
+}
+
+.sz-page {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--sz-text);
+    line-height: 1.5;
+}
+
+.sz-page * {
+    box-sizing: border-box;
+}
+
+/* Navigation */
+.sz-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: var(--sz-shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.sz-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.sz-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.sz-logo-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: var(--sz-shadow-sm);
+}
+
+.sz-logo-text {
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--sz-primary);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.sz-logo-text small {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--sz-accent);
+    letter-spacing: 2px;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+.sz-nav-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--sz-primary);
+    background: rgba(15, 37, 64, 0.03);
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(15, 37, 64, 0.05);
+}
+
+/* Hero */
+.sz-hero {
+    padding: 160px 24px 100px;
+    background:
+        radial-gradient(circle at top right, rgba(191, 161, 95, 0.12), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(15, 37, 64, 0.03), transparent 40%),
+        linear-gradient(135deg, #fff 0%, var(--sz-bg-light) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sz-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(15, 37, 64, 0.015) 79px, rgba(15, 37, 64, 0.015) 80px),
+        repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(15, 37, 64, 0.015) 79px, rgba(15, 37, 64, 0.015) 80px);
+    pointer-events: none;
+}
+
+.sz-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.sz-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sz-primary);
+    margin-bottom: 28px;
+    box-shadow: var(--sz-shadow-sm);
+    border: 1px solid var(--sz-border);
+}
+
+.sz-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--sz-primary);
+    margin: 0 0 24px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.sz-hero h1 span {
+    background: linear-gradient(135deg, var(--sz-primary) 0%, var(--sz-primary-light) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--sz-primary);
+    /* Fallback */
+}
+
+.sz-hero-desc {
+    font-size: 19px;
+    color: var(--sz-text-secondary);
+    margin: 0 0 40px;
+    line-height: 1.8;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sz-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sz-hero-stat {
+    text-align: center;
+}
+
+.sz-hero-stat-value {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--sz-primary);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.sz-hero-stat-value span {
+    color: var(--sz-accent);
+    font-size: 24px;
+    position: relative;
+    top: -12px;
+}
+
+.sz-hero-stat-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--sz-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.sz-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* 焦点状态 - 可访问性增强 */
+.sz-btn:focus {
+    outline: 2px solid var(--sz-accent);
+    outline-offset: 4px;
+}
+
+.sz-btn:focus-visible {
+    box-shadow:
+        0 8px 20px rgba(15, 37, 64, 0.35),
+        0 0 0 4px rgba(191, 161, 95, 0.3);
+}
+
+.sz-btn-primary {
+    background: linear-gradient(135deg, var(--sz-primary) 0%, var(--sz-primary-dark) 100%);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(15, 37, 64, 0.25);
+    overflow: hidden;
+}
+
+/* 按钮光泽扫过效果 */
+.sz-btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.sz-btn-primary:hover {
+    box-shadow: 0 8px 20px rgba(15, 37, 64, 0.35);
+    transform: translateY(-2px);
+    color: #fff;
+    text-decoration: none;
+}
+
+.sz-btn-primary:hover::before {
+    left: 100%;
+}
+
+.sz-btn-outline {
+    background: #fff;
+    color: var(--sz-primary);
+    border: 1px solid var(--sz-border);
+    margin-left: 16px;
+    box-shadow: var(--sz-shadow-sm);
+}
+
+.sz-btn-outline:hover {
+    border-color: var(--sz-primary);
+    color: var(--sz-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--sz-shadow-md);
+    text-decoration: none;
+}
+
+/* Clients */
+/* Clients */
+.sz-clients {
+    padding: 100px 24px;
+    background: #fff;
+}
+
+.sz-clients .sz-section-header {
+    margin-bottom: 60px;
+}
+
+.sz-clients-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    /* Spacious gap */
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sz-client-item {
+    width: 160px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sz-client-item:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-4px);
+}
+
+.sz-client-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.sz-client-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Services */
+.sz-services {
+    padding: 100px 24px;
+    background: #fff;
+}
+
+.sz-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sz-section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 64px;
+}
+
+.sz-section-tag {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--sz-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(191, 161, 95, 0.1);
+    border-radius: 100px;
+}
+
+.sz-section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--sz-primary);
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+.sz-section-desc {
+    font-size: 17px;
+    color: var(--sz-text-secondary);
+    margin: 0;
+    line-height: 1.7;
+}
+
+.sz-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.sz-service-card {
+    background: #fff;
+    border: 1px solid var(--sz-border);
+    border-radius: 20px;
+    padding: 36px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.sz-service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--sz-primary), var(--sz-accent));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sz-service-card:hover {
+    border-color: transparent;
+    box-shadow:
+        var(--sz-shadow-lg),
+        0 0 0 1px rgba(191, 161, 95, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transform: translateY(-8px);
+}
+
+/* 焦点状态 - 可访问性 */
+.sz-service-card:focus-within {
+    outline: 2px solid var(--sz-accent);
+    outline-offset: 4px;
+}
+
+.sz-service-card:hover::before {
+    opacity: 1;
+}
+
+.sz-service-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--sz-bg-light);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    font-size: 26px;
+    color: var(--sz-primary);
+    transition: all 0.3s ease;
+}
+
+.sz-service-card:hover .sz-service-icon {
+    background: var(--sz-primary);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.sz-service-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--sz-primary);
+    margin: 0 0 12px;
+}
+
+.sz-service-desc {
+    font-size: 15px;
+    color: var(--sz-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Contact */
+.sz-contact {
+    padding: 100px 24px;
+    background: radial-gradient(circle at bottom left, #1a3250, var(--sz-primary) 60%);
+    color: #fff;
+    position: relative;
+}
+
+.sz-contact .sz-section-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--sz-accent);
+}
+
+.sz-contact .sz-section-title {
+    color: #fff;
+}
+
+.sz-contact .sz-section-desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sz-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.sz-contact-item {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.sz-contact-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.sz-contact-icon {
+    font-size: 32px;
+    color: var(--sz-accent);
+    margin-bottom: 20px;
+}
+
+.sz-contact-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.sz-contact-value {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.sz-contact-value a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.sz-contact-value a:hover {
+    border-color: #fff;
+}
+
+.sz-contact-value a:focus {
+    outline: 2px solid var(--sz-accent);
+    outline-offset: 4px;
+}
+
+/* Footer */
+.sz-footer {
+    padding: 40px 24px;
+    background: #060F1A;
+    /* Even darker than primary-dark */
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 平板优化 (768px - 900px) */
+@media (min-width: 769px) and (max-width: 900px) {
+    .sz-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sz-contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .sz-hero {
+        padding-top: 120px;
+    }
+
+    .sz-hero::before {
+        opacity: 0.5;
+        /* 减弱网格效果在小屏幕上 */
+    }
+
+    .sz-hero h1 {
+        font-size: 36px;
+    }
+
+    .sz-services-grid,
+    .sz-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 移动端统计数据优化为2x2网格 */
+    .sz-hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding-top: 32px;
+    }
+
+    .sz-hero-stat:last-child {
+        grid-column: 1 / -1;
+        /* 最后一个跨两列居中 */
+    }
+
+    .sz-nav-contact {
+        display: none;
+        /* Hide phone on mobile to save space */
+    }
+
+    .sz-btn {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,359 @@
+/*
+ * 首正会计师事务所主页样式
+ * 配色：Navy Blue (#1E3A5F) + Gold (#C9A962)
+ */
+
+:root {
+    --sz-primary: #1E3A5F;
+    --sz-primary-dark: #152A45;
+    --sz-accent: #C9A962;
+    --sz-text: #1A1A1A;
+    --sz-text-secondary: #4A5568;
+    --sz-bg-light: #F8FAFC;
+    --sz-border: #E2E8F0;
+    --sz-shadow-md: 0 4px 12px rgba(30, 58, 95, 0.1);
+}
+
+.sz-page {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.sz-page * {
+    box-sizing: border-box;
+}
+
+/* Navigation */
+.sz-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--sz-border);
+}
+
+.sz-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.sz-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.sz-logo-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.sz-logo-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--sz-primary);
+    line-height: 1.3;
+}
+
+.sz-logo-text small {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    color: #718096;
+}
+
+.sz-nav-contact {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--sz-primary);
+}
+
+/* Hero */
+.sz-hero {
+    padding: 130px 24px 70px;
+    background: linear-gradient(135deg, #fff 0%, var(--sz-bg-light) 100%);
+    text-align: center;
+}
+
+.sz-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sz-hero-badge {
+    display: inline-block;
+    background: var(--sz-bg-light);
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    color: var(--sz-text-secondary);
+    margin-bottom: 24px;
+}
+
+.sz-hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--sz-primary);
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+.sz-hero h1 span {
+    color: var(--sz-accent);
+}
+
+.sz-hero-desc {
+    font-size: 18px;
+    color: var(--sz-text-secondary);
+    margin: 0 0 32px;
+    line-height: 1.7;
+}
+
+.sz-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+.sz-hero-stat {
+    text-align: center;
+}
+
+.sz-hero-stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--sz-primary);
+}
+
+.sz-hero-stat-value span {
+    color: var(--sz-accent);
+}
+
+.sz-hero-stat-label {
+    font-size: 14px;
+    color: var(--sz-text-secondary);
+    margin-top: 4px;
+}
+
+/* Buttons */
+.sz-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.sz-btn-primary {
+    background: var(--sz-primary);
+    color: #fff;
+}
+
+.sz-btn-primary:hover {
+    background: var(--sz-primary-dark);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.sz-btn-outline {
+    background: transparent;
+    color: var(--sz-primary);
+    border: 2px solid var(--sz-border);
+    margin-left: 12px;
+}
+
+.sz-btn-outline:hover {
+    border-color: var(--sz-primary);
+    text-decoration: none;
+}
+
+/* Services */
+.sz-services {
+    padding: 80px 24px;
+    background: #fff;
+}
+
+.sz-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sz-section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.sz-section-tag {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sz-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.sz-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--sz-primary);
+    margin: 0 0 16px;
+}
+
+.sz-section-desc {
+    font-size: 16px;
+    color: var(--sz-text-secondary);
+    margin: 0;
+}
+
+.sz-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.sz-service-card {
+    background: #fff;
+    border: 1px solid var(--sz-border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.sz-service-card:hover {
+    border-color: var(--sz-primary);
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.1);
+    transform: translateY(-4px);
+}
+
+.sz-service-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--sz-bg-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    font-size: 24px;
+    color: var(--sz-primary);
+}
+
+.sz-service-card:hover .sz-service-icon {
+    background: var(--sz-primary);
+    color: var(--sz-accent);
+}
+
+.sz-service-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sz-primary);
+    margin: 0 0 10px;
+}
+
+.sz-service-desc {
+    font-size: 14px;
+    color: var(--sz-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Contact */
+.sz-contact {
+    padding: 80px 24px;
+    background: var(--sz-primary);
+    color: #fff;
+}
+
+.sz-contact .sz-section-tag {
+    color: var(--sz-accent);
+}
+
+.sz-contact .sz-section-title {
+    color: #fff;
+}
+
+.sz-contact .sz-section-desc {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sz-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.sz-contact-item {
+    text-align: center;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sz-contact-icon {
+    font-size: 28px;
+    color: var(--sz-accent);
+    margin-bottom: 16px;
+}
+
+.sz-contact-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.sz-contact-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.sz-contact-value a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Footer */
+.sz-footer {
+    padding: 32px 24px;
+    background: var(--sz-primary-dark);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .sz-hero h1 {
+        font-size: 32px;
+    }
+
+    .sz-services-grid,
+    .sz-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sz-hero-stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+}

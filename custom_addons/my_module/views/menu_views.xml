@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========== 菜单定义 ========== -->
+    
+    <!-- 根菜单 -->
+    <menuitem id="menu_my_module_root"
+              name="示例应用"
+              sequence="100"
+              web_icon="my_module,static/description/icon.png"/>
+    
+    <!-- 一级菜单 -->
+    <menuitem id="menu_my_example"
+              name="示例管理"
+              parent="menu_my_module_root"
+              sequence="10"/>
+    
+    <!-- 二级菜单 -->
+    <menuitem id="menu_my_example_records"
+              name="示例记录"
+              parent="menu_my_example"
+              action="action_my_example"
+              sequence="10"/>
+    
+    <!-- 配置菜单 -->
+    <menuitem id="menu_my_module_config"
+              name="配置"
+              parent="menu_my_module_root"
+              sequence="100"
+              groups="base.group_system"/>
+    
+    <menuitem id="menu_my_example_tags"
+              name="标签"
+              parent="menu_my_module_config"
+              action="action_my_example_tag"
+              sequence="10"/>
+</odoo>
